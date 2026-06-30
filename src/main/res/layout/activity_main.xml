@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.tacticalgame.shooter.GameView
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/hud_background"
+        android:padding="12dp"
+        android:layout_gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:spacing="8dp">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_aimbot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AIMBOT"
+                android:textColor="@color/neon_green" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_esp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESP"
+                android:textColor="@color/neon_green" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_auto_fire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AUTO FIRE"
+                android:textColor="@color/neon_green" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/hud_background"
+        android:padding="12dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:id="@+id/text_sensitivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aimbot Sensitivity: 1.0x"
+            android:textColor="@color/neon_blue"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/seek_sensitivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="49"
+            android:progress="9"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/text_esp_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ESP Range: 50m"
+            android:textColor="@color/neon_blue"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/seek_esp_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="225"
+            android:progress="0" />
+    </LinearLayout>
+</FrameLayout>
